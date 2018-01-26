@@ -1,53 +1,97 @@
 <ng-container [ngSwitch]="appService.selectedMenu">
-  <section *ngSwitchCase="'home'">
-    <h1>Home</h1>
-    <p>
-    Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam missus a socero per militares
-    numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis Antiochiae
-    gestis per minorem Armeniam lapsus Constantinopolim petit exindeque per protectores retractus artissime tenebatur.
-    </p>
+  <section *ngSwitchCase="'home'" fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="1em">
+    <mat-card fxFlex="calc(30% - 1em)">
+      <h1>Home</h1>
+      <mat-card-content>
+        <p>
+          Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam missus a socero per militares
+          numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis
+          Antiochiae gestis per minorem Armeniam lapsus Constantinopolim petit exindeque per protectores retractus artissime
+          tenebatur.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex="calc(30% - 1em)">
+      <h1>Home</h1>
+      <mat-card-content>
+        <p>
+          Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam missus a socero per militares
+          numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis
+          Antiochiae gestis per minorem Armeniam lapsus Constantinopolim petit exindeque per protectores retractus artissime
+          tenebatur.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex="calc(30% - 1em)">
+      <h1>Home</h1>
+      <mat-card-content>
+        <p>
+          Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam missus a socero per militares
+          numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis
+          Antiochiae gestis per minorem Armeniam lapsus Constantinopolim petit exindeque per protectores retractus artissime
+          tenebatur.
+        </p>
+      </mat-card-content>
+    </mat-card>
   </section>
-  <section *ngSwitchCase="'skills'">
-    <h1>Skills</h1>
-    <ul>
-      <li>Javascript</li>
-      <li>Html</li>
-      <li>CSS</li>
-      <li>Java</li>
-      <li>Objective-C</li>
-      <li>C++</li>
-    </ul>
+  <section *ngSwitchCase="'skills'" [style.width.%]="100">
+    <h1 class="mat-headline">Skills</h1>
+    <mat-grid-list [cols]="isSmallScreen ? 2 : 3" rowHeight="100px" gutterSize="12px">
+      <mat-grid-tile>
+        <mat-card fxFlex="0.8 0.8 auto">Javascript</mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card fxFlex="0.8 0.8 auto">Html</mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card fxFlex="0.8 0.8 auto">CSS</mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card fxFlex="0.8 0.8 auto">Java</mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card fxFlex="0.8 0.8 auto">Objective-C</mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card fxFlex="0.8 0.8 auto">C++</mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
   </section>
   <section *ngSwitchCase="'experiences'">
     <h1>Experiences</h1>
     <p>
-       Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas
-      ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu
+      Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas,
+      suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu
       deinde tabescebat immobilis.
     </p>
   </section>
   <section *ngSwitchCase="'contact'">
     <h1>Contact</h1>
     <p>
-       Quam ob rem cave Catoni anteponas ne istum quidem ipsum, quem Apollo, ut ais, sapientissimum iudicavit; huius enim facta,
+      Quam ob rem cave Catoni anteponas ne istum quidem ipsum, quem Apollo, ut ais, sapientissimum iudicavit; huius enim facta,
       illius dicta laudantur. De me autem, ut iam cum utroque vestrum loquar, sic habetote.
     </p>
   </section>
   <section *ngSwitchCase="'legal'">
     <h1>Legal notice</h1>
     <p>
-       Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines praetereo, quarum
-      acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum odium imperii nostri, quod constat nobilissimas
-      virgines se in puteos abiecisse et morte voluntaria necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non
-      gravissima sint, sed quia nunc sine teste dico.
+      Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines praetereo, quarum
+      acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum odium imperii nostri, quod constat
+      nobilissimas virgines se in puteos abiecisse et morte voluntaria necessariam turpitudinem depulisse. Nec haec idcirco
+      omitto, quod non gravissima sint, sed quia nunc sine teste dico.
     </p>
   </section>
   <section *ngSwitchCase="'credits'">
     <h1>Credits</h1>
     <p>
       Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives
-      bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam
-      navigabile flumen Calycadnus interscindit.
+      bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam
+      mediam navigabile flumen Calycadnus interscindit.
     </p>
+  </section>
+  <section *ngSwitchCase="'todos'">
+    <h1>Todos</h1>
+    <app-add></app-add>
+    <app-list></app-list>
   </section>
 </ng-container>
